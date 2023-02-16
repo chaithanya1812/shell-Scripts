@@ -1,0 +1,60 @@
+----------------------------------------------------
+#!/usr/bin/ env bash
+ add () {
+echo -n "enter the first number: \c"
+read  first
+echo -n "enter the second number:\c"
+read   second
+third=`expr $first + $second`
+echo "The sum of two numbers  is ${third}"
+}
+add
+-------------------------------------------------
+#!/usr/bin/ env bash
+#function 1
+add () {
+first=$1
+second=$2
+echo "The sum of two numbers  is $(( $first + $second))"
+}
+#function 2
+apply (){
+echo -n "enter the first number: \c"
+read  first
+echo -n "enter the second number:\c"
+read second
+add $first $second
+}
+# calling function apply and it will call the function add
+apply
+-----------------------------------------------
+#!/usr/bin/ env bash
+#function software to install taking input from user.............
+software () {
+echo -n "Type which software you want to install:\c"
+read soft
+apt-get -y install ${soft}
+if [ $? = '0' ]
+then
+echo  "\e[1;31m package ${soft} is sucessfully installed  \e[0m"
+else
+echo "\e[1;31m package ${soft} is NOT sucessfully installed  \e[0m"
+fi
+}
+#calling function
+software
+--------------------------------------------------------
+#!/usr/bin env bash
+#this will print the information stored in /etc/passwd based on name you given
+echo -n "Enter the name of  the user in /etc/passwd you want to print:\c"
+read user
+echo "---------------------------------------------------------------"
+cat /etc/passwd | grep "${user}"
+# if user is present it exit-status of last command 0 otherwise the exit-status is non-zero
+if [ $? = "0" ]
+then
+echo "user is present"
+else
+echo "user is  not  present"
+fi
+--------------------------------------------------------------
