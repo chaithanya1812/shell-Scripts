@@ -1,0 +1,26 @@
+# LOGIC-1
+#!/usr/bin env bash
+echo -n "enter the table name:\c"
+read numb
+echo -n "enter the table last  name:\c"
+read last
+seq 1 $last | while read p
+do
+res=`expr ${numb} \* $p`
+echo "${numb} * $p = $res"
+done
+--------------------------------------------
+#LOGIC-2
+#!/usr/bin env bash
+echo -n "enter the table name:\c"
+read numb
+echo -n "enter the table last  name:\c"
+read last
+i=1
+while [ $i -le $last ]
+do
+res=`expr $numb \* $i`
+echo "$numb * $i = $res"
+i=`expr $i + 1`
+done
+-------------------------------------------------
