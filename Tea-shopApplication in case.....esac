@@ -1,5 +1,8 @@
 #!/usr/bin env bash
+echo "HONEY-TEA STALL"
+echo "-----------------------"
 echo "1)-Tea\n" "2)-Coffe\n" "3)-Lemontea\n" "4)-Badham-Milk"
+echo "------------------------"
 echo -n "select one option:\c"
 read item
 if [ $item -le 4 ]
@@ -7,29 +10,37 @@ then
 case $item in
        '1')       echo "1-cup of Tea=10rs"
                   read -p "Enter how many cups of tea you want:" qunty
+                  echo "-------------------------"
                   amount=`expr $qunty \* 10`
                   echo "The amonut you have to pay is=$amount"
                   echo "Thank you visit again"
+                  echo "--------------------------"
                   break ;;
         '2')      echo "1-cup of Coffe=12rs"
                   read -p "Enter how many cups of Coffe you want:" qunty
+                  echo "-------------------------"
                   amount=`expr $qunty \* 12`
                   echo "The amonut you have to pay is=$amount"
                   echo "Thank you visit again"
+                  echo "-------------------------"
                   break ;;
 
         '3')       echo "1-cup of Lemontea=15rs"
                   read -p "Enter how many cups of Lemontea you want:" qunty
+                  echo "-------------------------"
                   amount=`expr $qunty \* 15`
                   echo "The amonut you have to pay is=$amount"
                   echo "Thank you visit again"
+                  echo "-------------------------"
                   break ;;
 
         '4')       echo "1-cup of Badham-Milk=20rs"
                   read -p "Enter how many cups of Badham-Milk you want:" qunty
+                  echo "-------------------------"
                   amount=`expr $qunty \* 20`
                   echo "The amonut you have to pay is=$amount"
                   echo "Thank you visit again"
+                  echo "-------------------------"
                   break ;;
 esac
 else
