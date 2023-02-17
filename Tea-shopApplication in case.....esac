@@ -1,0 +1,37 @@
+#!/usr/bin env bash
+echo "1)-Tea\n" "2)-Coffe\n" "3)-Lemontea\n" "4)-Badham-Milk"
+echo -n "select one option:\c"
+read item
+if [ $item -le 4 ]
+then
+case $item in
+       '1')       echo "1-cup of Tea=10rs"
+                  read -p "Enter how many cups of tea you want:" qunty
+                  amount=`expr $qunty \* 10`
+                  echo "The amonut you have to pay is=$amount"
+                  echo "Thank you visit again"
+                  break ;;
+        '2')      echo "1-cup of Coffe=12rs"
+                  read -p "Enter how many cups of Coffe you want:" qunty
+                  amount=`expr $qunty \* 12`
+                  echo "The amonut you have to pay is=$amount"
+                  echo "Thank you visit again"
+                  break ;;
+
+        '3')       echo "1-cup of Lemontea=15rs"
+                  read -p "Enter how many cups of Lemontea you want:" qunty
+                  amount=`expr $qunty \* 15`
+                  echo "The amonut you have to pay is=$amount"
+                  echo "Thank you visit again"
+                  break ;;
+
+        '4')       echo "1-cup of Badham-Milk=20rs"
+                  read -p "Enter how many cups of Badham-Milk you want:" qunty
+                  amount=`expr $qunty \* 20`
+                  echo "The amonut you have to pay is=$amount"
+                  echo "Thank you visit again"
+                  break ;;
+esac
+else
+echo "pls select the right option between (1-4)"
+fi
