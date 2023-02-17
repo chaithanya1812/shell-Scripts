@@ -1,0 +1,2 @@
+docker ps -q  | xargs docker inspect --format  '{{.State.Running}} is using {{.Name}}'
+-----------------------------------------------------------------------
