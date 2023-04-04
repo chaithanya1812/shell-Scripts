@@ -2,7 +2,7 @@
 #!/usr/bin env bash
 echo -n "enter the table name:\c"
 read numb
-echo -n "enter the table last  name:\c"
+echo -n "enter the table last number:\c"
 read last
 seq 1 $last | while read p
 do
@@ -24,3 +24,23 @@ echo "$numb * $i = $res"
 i=`expr $i + 1`
 done
 -------------------------------------------------
+#Logic-3
+#!/usr/bin env bash
+read -p "enter the table number::" num
+read -p "enter the table last digit  number::" lastnum
+for (( i=1;i<=${lastnum};i++ ))
+do
+result=`expr ${num} \* ${i}`
+echo "${num} * ${i} =  ${result}"
+done
+------------------------------------
+#Logic -4
+#!/usr/bin env bash
+read -p "enter the table number:" num
+read -p "enter the last digit to be printed:" last
+for i in `seq 1 $last`
+do
+res=`expr $num \* $i`
+echo "$num * $i = $res"
+done
+------------------------------------
