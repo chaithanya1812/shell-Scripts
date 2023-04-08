@@ -44,3 +44,40 @@ res=`expr $num \* $i`
 echo "$num * $i = $res"
 done
 ------------------------------------
+###### Logic Converting C-programme into Linux ###########
+step:1   create file with .c extension
+step:2   vi table.c
+step:3  place this below content into table.c file
+--------------
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int tabnum,targ,res,i=0;
+printf("enter the table number::");
+scanf("%d",&tabnum);
+printf("enter the targted number::");
+scanf("%d",&targ);
+for(i=1;i<=targ;i++)
+{
+res=tabnum*i;
+printf("%d * %d = %d\n",tabnum,i,res);
+}
+}
+------------------------------------
+step:4  yum install gcc* -y
+  # Installing gcc compiler
+step:5  gcc -o table table.c
+step:6 cp table /usr/bin
+step:7 table
+#########################################
+
+
+
+
+
+
+
+
+
+
