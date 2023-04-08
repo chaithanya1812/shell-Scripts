@@ -1,0 +1,14 @@
+#!/bin/bash
+read -p "enter the number::" num
+d=2
+while [ $d -le $num ]; do
+        if [ $(( $num % $d )) -eq 0 ]; then
+         break
+        fi
+d=`expr $d + 1`
+done
+if [ $d == $num ]; then
+echo "$num is prime numberr"
+else
+echo "$num is NOT  a prime number"
+fi
