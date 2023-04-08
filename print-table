@@ -1,8 +1,8 @@
 # LOGIC-1
 #!/usr/bin env bash
-echo -n "enter the table name:\c"
+echo -e "enter the table name:\c"
 read numb
-echo -n "enter the table last number:\c"
+echo -e "enter the table last number:\c"
 read last
 seq 1 $last | while read p
 do
@@ -12,9 +12,9 @@ done
 --------------------------------------------
 #LOGIC-2
 #!/usr/bin env bash
-echo -n "enter the table name:\c"
+echo -e "enter the table name:\c"
 read numb
-echo -n "enter the table last  name:\c"
+echo -e "enter the table last  name:\c"
 read last
 i=1
 while [ $i -le $last ]
