@@ -1,0 +1,15 @@
+#!/usr/bin env bash
+###################
+#Checking for a  particular USER is present or not?
+#################
+echo -e "enter the username:\c"
+read username
+
+ grep -qw "${username}" /etc/passwd
+
+if [ $? -eq 0 ]
+then
+ echo "${username} user is present"
+else
+ echo "${username} user is not present"
+fi
