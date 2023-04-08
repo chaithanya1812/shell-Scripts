@@ -1,0 +1,46 @@
+#!/usr/bin bash
+echo "##### Programs Menu #####"
+echo -e "1.Adding""\n2.square of num""\n3.Big of 2 num""\n4.Even or odd""\n5.Break"
+echo -e  "#########################\n"
+
+read -p "Select one option::" opt
+case $opt in
+1)
+echo   "##Adding of two numbers##"
+echo "_____________________________________"
+read -p"enter first number::" first
+read -p "enter second number::" sec
+echo "sum of $first + $sec = $(($first+$sec))";;
+2)
+echo  "##Square of give number##"
+echo "_____________________________________"
+read -p "enter the number::" num
+echo "square of given number is $num * $num = $(($num*$num))"
+;;
+3)
+echo "##Big of two numbers##"
+echo "_____________________________________"
+read -p"enter first number::" first
+read -p "enter second number::" sec
+if [ $first -gt $sec ]; then
+echo "$first is big number"
+elif [ $first -eq $sec ]; then
+echo "$first is equal to $sec"
+else
+echo "$sec is big number"
+fi;;
+4)
+echo "##checking number is Even or odd##"
+echo "_____________________________________"
+read -p "enter the number::" num
+if [ $(($num % 2)) == 0 ]; then
+echo "$num is even number"
+else
+echo "$num is odd number"
+fi;;
+5)
+break;;
+*)
+echo "pls select the right option";;
+esac
+
