@@ -1,0 +1,36 @@
+#!/bin/bash
+####################
+# READING 3 subjects marks of a student
+# print total marks & avg marks of student & Allocating grades
+# Average-marks    Grade
+# ------------     -----
+# Above 90          A+
+# 80-90             A
+# 70-80             B
+# Below 70          C
+#######################
+ read -p "enter marks of english sub::" eng
+ read -p "enter marks of maths sub::" maths
+ read -p "enter marks of social sub::" social
+
+ tot=$[ $eng + $maths + $social ]
+ avg=$[ $tot / 3 ]
+ echo "###########Student-Report##############"
+
+ echo -e "Total marks of a student= ${tot}""\naverage marks is=${avg}"
+
+
+ ######Logic#################
+  if [ $avg -gt 90 ]
+   then
+     echo "Grade is A+"
+  elif [ $avg -gt 80 ] && [ $avg -lt 90 ]
+   then
+    echo "Grade is A"
+  elif [ $avg -gt 70 ] && [ $avg -lt 80 ]
+   then
+    echo "Grade is B"
+  else
+    echo "Grade is C"
+  fi
+echo "########################################"
