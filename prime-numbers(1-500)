@@ -1,0 +1,19 @@
+#!/usr/bin bash
+##### Printing prime numbers (1-500)  ##########
+for (( no=3;no<=500;no++ ))
+do
+  d=2
+  while [ $d -le  $no ]
+  do
+          if [ $(( $no % $d )) -eq 0 ]
+           then
+            break
+          fi
+       d=`expr $d + 1`
+done
+if [ $d == $no ]
+then
+echo "$no"
+fi
+
+done
