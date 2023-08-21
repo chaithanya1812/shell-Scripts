@@ -71,20 +71,6 @@ echo "10"
 fi
 }
 
-function testit {
- if [ $1 = "Tea" ]; then
-  echo  "10"
-elif [ $1 = "Coffee" ];then
- echo  "10"
-elif [ $1 = "Boost" ];then
- echo "15"
-elif [ $1 = "Lmn.Tea" ];then
-echo "15"
-else
-echo "10"
-fi
-}
-
 function amount {
  if [ $1 = "Tea" ]; then
  echo  `expr $2 \* 10`
@@ -92,7 +78,7 @@ elif [ $1 = "Coffee" ];then
  echo  `expr $2 \* 10`
 elif [ $1 = "Boost" ];then
  echo  `expr $2 \* 15`
-elif [ $1 = "Horlicks" ];then
+elif [ $1 = "Lmn.Tea" ];then
 echo  `expr $2 \* 15`
 else
 echo  `expr $2 \* 10`
@@ -120,3 +106,5 @@ printf "%s\n" "-------------------------------------------"
 cat ./file20.txt | awk 'BEGIN{count=0} {count=count+$2} END{ printf("\n  T QTY::  %dpcs.\n",count)}'
 cat ./file20.txt | awk 'BEGIN{count=0} {count=count+1} END{ printf("  NO OF ITEMS:  %d\n",count)}'
 echo -e "\e[0m"
+
+
