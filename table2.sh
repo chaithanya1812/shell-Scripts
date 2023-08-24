@@ -15,3 +15,25 @@ while [ $i -le $last ]; do
         i=$(( $i + 1))
 done
 echo -e "-----------------${normal}"
+
+#############################################
+
+#!/bin/bash
+table=` echo $RANDOM`
+echo $table
+
+mtable=`echo $table | cut -c 2`
+echo "$mtable"
+
+last=`seq 10 20 | shuf -n 1`
+
+i=0
+echo -e "\e[32m"
+while [ $i -le $last ]
+do
+
+printf "%d * %d = %d\n" "$mtable" "$i" "`expr $mtable \* $i`"
+
+i=$((i+1))
+done
+echo -e "\e[0m"
