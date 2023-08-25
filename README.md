@@ -39,4 +39,21 @@ https://github.com/chaithanya1812/shell-Scripts/assets/111736742/362c140f-5f24-4
 Name,AC.number,Pin,Amount,e-mail,P.Number
 Dasari Chaithanya,3780478***5858,1212,45800,chaithanya1812@gmail.com,6303128***
 ```
+# ATM PIN-CHANGE
+#see the PIN (Befor PIN-Change)
+
+```bash 
+Name,AC.number,Pin,Amount,e-mail,P.Number
+Dasari Chaithanya,3780478***5858,1212,45800,chaithanya1812@gmail.com,6303128***
+```
+#Attached-viedo
+
+https://github.com/chaithanya1812/shell-Scripts/assets/111736742/ebfece66-df59-4168-9317-9a62838ca90b
+
+#see the PIN (After PIN-Change)
+```bash 
+Name,AC.number,Pin,Amount,e-mail,P.Number
+Dasari Chaithanya,3780478***5858,1812,45800,chaithanya1812@gmail.com,6303128***
+``
+
 
