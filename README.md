@@ -84,6 +84,11 @@ Dasari Chaithanya,3780478***5858,1812,63800,chaithanya1812@gmail.com,6303128***
 
 https://github.com/chaithanya1812/shell-Scripts/assets/111736742/5f2c3a05-7fd2-4c61-8963-4561cd08e540
 
+# Insufficient-Funds
+#Attached-viedo
+
+https://github.com/chaithanya1812/shell-Scripts/assets/111736742/2b6d2b64-0618-4a8d-a027-fbe4d183072b
+
 
 
 
