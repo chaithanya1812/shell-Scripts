@@ -229,8 +229,7 @@ if [ $previouspin = $pincheck ]; then
             echo -e "\e[0m"
             echo -e "\e[25m"
             sleep 3
-            clear
-            exit 1
+            break
            else
            echo -e "Sorry, passwords do not match."
        fi
@@ -245,6 +244,7 @@ else
     echo -e "\e[25m"
     sleep 3
     clear
+    exit 1
 fi
 }
 ###################################################
@@ -396,11 +396,13 @@ case $opt in
            recepit1
            ;;
        6) pinchange
-          #recepit1
+          recepit1
                ;;
-       8)   clear
+       8)   pin
+            pinchecking $PIN $orginalpin
             deposit
             recepit1
             ;;
 
 esac
+
