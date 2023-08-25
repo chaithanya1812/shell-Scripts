@@ -51,9 +51,39 @@ Dasari Chaithanya,3780478***5858,1212,45800,chaithanya1812@gmail.com,6303128***
 https://github.com/chaithanya1812/shell-Scripts/assets/111736742/ebfece66-df59-4168-9317-9a62838ca90b
 
 #see the PIN (After PIN-Change)
+
 ```bash 
 Name,AC.number,Pin,Amount,e-mail,P.Number
 Dasari Chaithanya,3780478***5858,1812,45800,chaithanya1812@gmail.com,6303128***
-``
+```
+
+
+
+# Deposit Money
+
+#see money (Before Deposit)
+
+```bash 
+Name,AC.number,Pin,Amount,e-mail,P.Number
+Dasari Chaithanya,3780478***5858,1212,45800,chaithanya1812@gmail.com,6303128***
+```
+#Attached-viedo
+
+https://github.com/chaithanya1812/shell-Scripts/assets/111736742/08642b70-e8ac-4a96-85e2-92ed684e3dfe
+
+#see money (After Deposit)
+
+```bash 
+Name,AC.number,Pin,Amount,e-mail,P.Number
+Dasari Chaithanya,3780478***5858,1812,63800,chaithanya1812@gmail.com,6303128***
+```
+
+# Balance-Enquiry
+
+#Attached-viedo
+
+https://github.com/chaithanya1812/shell-Scripts/assets/111736742/5f2c3a05-7fd2-4c61-8963-4561cd08e540
+
+
 
 
