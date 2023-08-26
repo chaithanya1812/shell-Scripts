@@ -9,7 +9,7 @@ Name,AC.number,Pin,Amount,e-mail,P.Number
 Dasari Chaithanya,3780478***5858,1212,65800,chaithanya1812@gmail.com,6303128***
 ```
 # Source-code link
-
+https://slides.com/chaithanya/bold/fullscreen
 # source code
 ```bash 
 #!/bin/bash
@@ -420,7 +420,6 @@ case $opt in
 
 esac
 ```  
-https://slides.com/chaithanya/bold/fullscreen
 
 # withdraw money
 #Before Withdraw see the amount
