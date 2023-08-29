@@ -53,6 +53,7 @@ if [ $opt = "yes" ] || [ $opt = "Yes" ]; then
       quantity[$i]=$qunty
        i=`expr $i + 1`
        ;;
+  *) echo "pls select the right option" ;;
 
 esac
 fi
@@ -84,6 +85,7 @@ else
 echo  `expr $2 \* 10`
 fi
 }
+clear
 echo -e  "\e[32m"
 printf "\n\n  `date "+%D %M:%S"`"
 printf "\n\t\t\t%s\n" "BILL#00675"
@@ -106,5 +108,3 @@ printf "%s\n" "-------------------------------------------"
 cat ./file20.txt | awk 'BEGIN{count=0} {count=count+$2} END{ printf("\n  T QTY::  %dpcs.\n",count)}'
 cat ./file20.txt | awk 'BEGIN{count=0} {count=count+1} END{ printf("  NO OF ITEMS:  %d\n",count)}'
 echo -e "\e[0m"
-
-
