@@ -505,7 +505,121 @@ https://github.com/chaithanya1812/shell-Scripts/assets/111736742/5f2c3a05-7fd2-4
 #Attached-viedo
 
 https://github.com/chaithanya1812/shell-Scripts/assets/111736742/2b6d2b64-0618-4a8d-a027-fbe4d183072b
+# -----------------------------------------------------------------------------------------
+# Tea-Shop
 
+```bash
+#!/bin/bash
+> file20.txt
+echo "-----------TEA-SHOP------------"
+echo -e "\t\e[38;5;82m1.Tea \e[38;5;198m(10Rs)"
+echo -e "\t\e[38;5;82m2.Coffee \e[38;5;198m(10Rs)"
+echo -e "\t\e[38;5;82m3.Boost \e[38;5;198m(15Rs)"
+echo -e "\t\e[38;5;82m4.Lmn.Tea \e[38;5;198m(15Rs)"
+echo -e "\t\e[38;5;82m5.Milk \e[38;5;198m(10Rs)"
+echo "---------------------------------------"
+echo -e "\e[0m"
+i=0
+while true
+do
+echo -e "\nPls Enter \e[5myes \e[25m to select item or Type \e[5mbill \e[25mto get bill:\c "
+   #echo -e  "pls enter yes  to select item or type bill to get bill::"
+read opt
+echo -e "\e[0m"
+    if [ $opt = "bill" ] || [ $opt = "Bill" ]
+    then
+     break
+   fi
+if [ $opt = "yes" ] || [ $opt = "Yes" ]; then
+ echo -n "Select the item option::"
+ read name
+  case $name in
+   1) iteam[$i]="Tea"
+      echo -n "Enter the  quantity::"
+      read  qunty
+      quantity[$i]=$qunty
+       i=`expr $i + 1`
+       ;;
+   2) iteam[$i]="Coffee"
+      echo -n "Enter the  quantity::"
+      read  qunty
+      quantity[$i]=$qunty
+        i=`expr $i + 1`
+       ;;
+   3) iteam[$i]="Boost"
+      echo -n "Enter the  quantity::"
+      read  qunty
+      quantity[$i]=$qunty
+        i=`expr $i + 1`
+       ;;
+   4) iteam[$i]="Lmn.Tea"
+      echo -n "Enter the  quantity::"
+      read  qunty
+      quantity[$i]=$qunty
+        i=`expr $i + 1`
+       ;;
+   5) iteam[$i]="Milk"
+      echo -n "Enter the  quantity::"
+      read  qunty
+      quantity[$i]=$qunty
+       i=`expr $i + 1`
+       ;;
+  *) echo "pls select the right option" ;;
 
+esac
+fi
+done
+function testit {
+ if [ $1 = "Tea" ]; then
+  echo  "10"
+elif [ $1 = "Coffee" ];then
+ echo  "10"
+elif [ $1 = "Boost" ];then
+ echo "15"
+elif [ $1 = "Lmn.Tea" ];then
+echo "15"
+else
+echo "10"
+fi
+}
+
+function amount {
+ if [ $1 = "Tea" ]; then
+ echo  `expr $2 \* 10`
+elif [ $1 = "Coffee" ];then
+ echo  `expr $2 \* 10`
+elif [ $1 = "Boost" ];then
+ echo  `expr $2 \* 15`
+elif [ $1 = "Lmn.Tea" ];then
+echo  `expr $2 \* 15`
+else
+echo  `expr $2 \* 10`
+fi
+}
+clear
+echo -e  "\e[32m"
+printf "\n\n  `date "+%D %M:%S"`"
+printf "\n\t\t\t%s\n" "BILL#00675"
+printf "%s\n" "-------------------------------------------"
+printf "%s\t%s\t%s\t%s\n" "ITEM NAME" "WT/QTY" "PRICE" "AMT"
+printf "%s\n" "-------------------------------------------"
+for j in ${!iteam[@]}
+do
+printf  "%s\t\t %d\t`testit ${iteam[$j]}`\t`amount ${iteam[$j]} ${quantity[$j]}` \n" "${iteam[$j]}" "${quantity[$j]}"
+#printf  "%s\t\t %d\t`testit ${iteam[$j]}`\t`amount ${iteam[$j]} ${quantity[$j]}` \n" "${iteam[$j]}" "${quantity[$j]}" | awk 'BEGIN{ totalamount=0} { totalamount=totalamount+$4 }'
+done
+printf "%s\n" "-------------------------------------------"
+
+for j in ${!iteam[@]}
+do
+printf  "%s\t\t %d\t`testit ${iteam[$j]}`\t`amount ${iteam[$j]} ${quantity[$j]}` \n" "${iteam[$j]}" "${quantity[$j]}"  >> file20.txt
+done
+cat ./file20.txt | awk 'BEGIN{ totalamount=0} { totalamount=totalamount+$4} END{ printf("\t\t\t   Rs   %d\n",totalamount)}'
+printf "%s\n" "-------------------------------------------"
+cat ./file20.txt | awk 'BEGIN{count=0} {count=count+$2} END{ printf("\n  T QTY::  %dpcs.\n",count)}'
+cat ./file20.txt | awk 'BEGIN{count=0} {count=count+1} END{ printf("  NO OF ITEMS:  %d\n",count)}'
+echo -e "\e[0m"
+
+```
 
 
