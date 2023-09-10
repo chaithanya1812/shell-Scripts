@@ -1,5 +1,5 @@
 # shell-Scripts
-# 1.ATM-Application 2.Tea-Shop
+# 1.ATM-Application || 2.Tea-Shop
 
 https://github.com/chaithanya1812/shell-Scripts/assets/111736742/10835256-a8b2-4163-95a2-0d0f3c2219ce
 
