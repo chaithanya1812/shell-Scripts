@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo  -e "Enter the Absoulte Path Location:\c"
+read path
+
+Total_Files=$(ls $path | wc -l)
+
+printf "Total files in this %s location is = %d\n" "$path" "$Total_Files"
