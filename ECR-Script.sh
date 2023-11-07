@@ -22,7 +22,7 @@ echo -e "\nEnter ECR Region_name::\c"
 read Region_Name
 # Searching for images
 
-aws ecr list-images  --repository-name ${Repo_Name} --region ${Region_Name} | jq -r  '.imageIds[].imageTag' | grep "${TAG}"
+aws ecr list-images  --repository-name ${Repo_Name} --region ${Region_Name} | jq -r  '.imageIds[].imageTag' | grep "${TAG}" > /dev/null
 
 if [[ $? -eq 0 ]]; then
     echo -e "$R Image found with this ${TAG}"
